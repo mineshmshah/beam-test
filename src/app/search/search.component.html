@@ -1,0 +1,25 @@
+<!--This was old code- we moved one level down so the handler function doest work-->
+<!--<div>-->
+  <!--<form id="search-box" action="submit" (submit)="$event.preventDefault();search.emit(term)">-->
+    <!--<input type="text" value="{{term}}" (input)="updateTerm($event)">-->
+    <!--<button (click)="search.emit(term)">Search</button>-->
+    <!--Term's state is {{term}}-->
+  <!--</form>-->
+<!--</div>-->
+
+<h1>New code </h1>
+<h1>
+  Searching for: {{term}}
+</h1>
+
+<app-searchbox
+  [term] = "term"
+  (search)="term=$event; search.emit($event)">
+</app-searchbox>
+<app-search-suggestion
+  [term] = "term"
+  [suggestions] = "suggestions"
+  (search)="term=$event; search.emit($event)">
+</app-search-suggestion>
+
+

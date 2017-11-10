@@ -1,0 +1,9 @@
+<p>{{cat.name}}</p>
+
+<pre>{{cat | json}}</pre>
+
+<div *ngIf="cat.age">Cat Age: {{cat.age}}</div>
+
+
+<button (click)="attack.emit(cat)">Attack</button>
+<button (click)="run.emit(cat)">Run Away!</button>

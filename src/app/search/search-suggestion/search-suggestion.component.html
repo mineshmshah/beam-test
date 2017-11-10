@@ -1,0 +1,23 @@
+<p>
+  search-suggestion works!
+</p>
+<!--This is taking the term variable from the ts file-->
+
+{{term}}
+<ul>
+  <li
+    *ngFor="let suggestion of suggestions"
+    (click)="search.emit(suggestion)">
+
+    <strong *ngIf="suggestion == term">
+      {{suggestion}}
+    </strong>
+
+    <span *ngIf="suggestion != term">
+				{{suggestion}}
+			</span>
+
+  </li>
+</ul>
+
+
