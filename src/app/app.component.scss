@@ -1,0 +1,14 @@
+$pink: #f55;
+$base: 16px;
+$large: $base *2;
+h1{
+  color:lighten($pink,10%);
+  font-size: $large;
+}
+
+p{
+  color:blue;
+  font-size: 20px;
+}
+
+
